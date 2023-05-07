@@ -1,5 +1,6 @@
 // Función Zodiaco 
     // Fechas en base a: https://www.lavanguardia.com/horoscopo/signos-zodiaco
+
 function zodiac(day: number, month: number) {
     if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
         return "Aries";
@@ -25,7 +26,36 @@ function zodiac(day: number, month: number) {
         return "Acuario";
     } else 
     return "Piscis";
-}
+};
+console.log(zodiac(30, 12))
 
-console.log(zodiac(7, 5));
+
+function continent(country: string) {
+    if (country == "España" || country == "Francia" || country == "Alemania" || country == "Italia" || country == "Holanda") {
+        console.log(`${country}` + " pertenece a Europa");  
+    } else if (country == "EEUU" || country == "Canada") {
+        console.log(`${country}` + " pertenece a America");
+    } else if (country == "Venezuela" || country == "Argentina" || country == "Brasil" || country == "Chile" || country == "El salvador") {
+        console.log(`${country}` + " pertenece a Latinoamérica");
+    } else if (country == "Australia" || country == "Fiji" || country == "Nueva Zelanda" || country == "Samoa") {
+        console.log(`${country}` + " pertenece a Oceania");
+    } else if (country == "China" || country == "Japon" || country == "Indonesia" || country == "India" || country == "Tailandia") {
+        console.log(`${country}` + " pertenece a Asia");
+    } else if (country == "Sudafrica" || country == "Nigeria" || country == "Kenia" || country == "Ghana" || country == "Marruecos") {
+        console.log(`${country}` + " pertenece a Africa");
+    }
+}
+continent("Marruecos");
+
+
+export function isEven(x:number) {
+    if (x % 2 === 0) {
+        return "El número es par"
+    } else if (x % 2 != 0) {
+        return "El número es impar"
+    }
+}
+console.log(isEven(3));
+
+
 
