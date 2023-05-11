@@ -44,17 +44,19 @@ export class Point {
         return distance
     }
     calculateQuadrant(): number {
+        let resultado: number
     if (this.x === 0 || this.y === 0) {
-        return 0;
+        resultado = 0;
         } else if (this.x > 0 && this.y > 0) {
-        return 1;
+        resultado = 1;
         } else if (this.x < 0 && this.y > 0) {
-        return 2;
+        resultado = 2;
         } else if (this.x < 0 && this.y < 0) {
-        return 3;
+        resultado = 3;
         } else {
-        return 4;
+        resultado = 4;
         }
+        return resultado;
     }
     calculateNearest(points: Point[]): Point {
         let near: Point = points[0];
