@@ -25,21 +25,17 @@ console.log(reversedArr);
 
 
 function isRainbow(colors: string[]) {
-    let colores: string[] = ["Rojo", "Naranja", "Amarillo", "Verde", "Azul", "Indigo", "Violeta"]
-    for (let i = 0; i < colors.length; i++) {
-        let colorSi = false
-        for (let j = 0; j < colores.length; j++) {
-            if (colores[j].includes(colors[i])) {
-                console.log("El " + `${colors[i]} ` + "está en el arcoiris");
-                colorSi = true;
-                break;
-            } 
-        }if (colorSi == false) {
-            console.log("El " + `${colors[i]} ` + "NO está en el arcoiris");
-        }
-    }
+    let rainbowColors: string[] = ["Rojo", "Naranja", "Amarillo", "Verde", "Azul", "Indigo", "Violeta"];
+  
+    colors.forEach(function(color) {
+      if (rainbowColors.includes(color)) {
+        console.log(`El ${color} está en el arcoiris`);
+      } else {
+        console.log(`El ${color} NO está en el arcoiris`);
+      }
+    });
 }
-isRainbow(["Rojo", "Morado", "Lila", "Verde"])
+isRainbow(["Rojo", "Morado", "Lila", "Verde"]);
 
 export function add(myWord: string[]) {
     let resSuma: number = 0
